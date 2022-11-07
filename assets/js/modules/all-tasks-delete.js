@@ -5,7 +5,7 @@ function allTasksDelete() {
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
 
     // check if local storage has more tasks than 1 then create an all-tasks-delete button
-    if (tasks.length >= 1) {
+    if (tasks.length === 1) {
         let btnDelete = document.createElement('button')
         btnDelete.classList.add('btn__delete-all-tasks')
         btnDelete.setAttribute('type', 'submit');

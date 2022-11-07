@@ -6,6 +6,7 @@ import {taskTimeHoursEdit} from "./task-time-edit";
 import {taskTimeMinutesEdit} from "./task-time-edit";
 import taskComplete from "./task-complete";
 import taskRemove from "./task-remove";
+import allTasksDelete from "./all-tasks-delete";
 
 const task = document.querySelector('.task__text-input')
 const taskTimeHours = document.querySelector('.task__time-input--hours')
@@ -112,6 +113,9 @@ function taskAdd() {
 
     // clear input
     task.value = ''
+    taskTimeHours.value = '00'
+    taskTimeMinutes.value = '00'
+    allTasksDelete()
 }
 
 export default taskAdd
