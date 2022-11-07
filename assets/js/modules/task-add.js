@@ -16,37 +16,37 @@ function taskAdd() {
     // return if task is empty or has value less 5 symbols
     if (task.value === '' || task.value.length < 5) {
         alert('Напишите задание (не меньше 5 символов)')
-        return false
+        return
     }
 
     // check if hours value less or empty than necessary
     if(taskTimeHours.value === '' || taskTimeHours.value.length < 2 || taskTimeHours.value.length > 2) {
         alert('Напишите количество часов, 2 символа')
-        return false;
+        return
     }
 
     // check if minutes value less or empty than necessary
     if(taskTimeMinutes.value === '' || taskTimeMinutes.value.length < 2 || taskTimeMinutes.value.length > 2) {
         alert('Напишите количество минут, 2 символа')
-        return false;
+        return
     }
 
     // check if hours value more than necessary
     if (taskTimeHours.value > 23) {
         alert('Количество часов написано некорректно')
-        return false
+        return
     }
 
     // check if minutes value more than necessary
     if (taskTimeMinutes.value > 59) {
         alert('Количество минут написано некорректно')
-        return false
+        return
     }
 
     // return if task is already exists
     if (document.querySelector(`input[value="${task.value}"]`)) {
         alert('Такое задание уже существует')
-        return false;
+        return
     }
 
     // add task to local storage
