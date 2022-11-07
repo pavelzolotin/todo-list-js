@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/main.css" type="text/css">
+    <title>TODO</title>
+</head>
+<body>
+<div class="container">
+    <div class="app">
+        <form class="app__form">
+            <input class="task__text-input" type="text" placeholder="Напишите задание">
+            <input class="task__time-input--hours" type="text" pattern="[0-9]*" value="00">
+            <span>:</span>
+            <input class="task__time-input--minutes" type="text" pattern="[0-9]*" value="00">
+            <button class="btn__add-task" type="submit">&plus;</button>
+        </form>
+        <ol></ol>
+    </div>
+</div>
+<script src="public/bundle.js"></script>
+</body>
+</html>
