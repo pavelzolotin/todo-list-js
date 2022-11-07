@@ -117,8 +117,13 @@ function taskAdd() {
     taskTimeHours.value = '00'
     taskTimeMinutes.value = '00'
 
-    // display all-tasks-delete btn
-    allTasksDelete()
+    //get tasks in localStorage
+    let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
+
+    // display all-tasks-delete btn from condition
+    if (tasks.length === 1) {
+        allTasksDelete()
+    } else return
 }
 
 export default taskAdd

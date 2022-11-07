@@ -10,14 +10,15 @@ import allTasksDelete from "./all-tasks-delete";
 
 function tasksLoad() {
     // check if localStorage has at least one task, then create an all-tasks-delete button or return
-    if (localStorage.getItem('tasks') === null) {
-        return
-    } else {
-        allTasksDelete()
-    }
+    if (localStorage.getItem('tasks') === null) return
 
     // Get the tasks from localStorage and convert it to an array
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
+
+    // display all-tasks-delete btn from condition
+    if (tasks.length >= 1) {
+        allTasksDelete()
+    } else return
 
     // Loop through the tasks and add them to the list
     tasks.forEach(task => {
