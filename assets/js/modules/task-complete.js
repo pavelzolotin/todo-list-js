@@ -9,6 +9,8 @@ function taskComplete(event) {
     // update local storage
     localStorage.setItem('tasks', JSON.stringify(tasks))
     event.parentNode.children[0].classList.toggle('completed')
+    event.parentNode.children[1].classList.toggle('completed-without-decoration')
+    event.parentNode.children[3].classList.toggle('completed-without-decoration')
 }
 
 export default taskComplete

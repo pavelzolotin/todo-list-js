@@ -183,3 +183,12 @@ $background-color: #f5f5f5;
     }
   }
 }
+
+.completed {
+  background: #1d5c0347;
+  text-decoration: line-through;
+}
+
+.completed-without-decoration {
+  background: #1d5c0347;
+}

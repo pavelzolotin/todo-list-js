@@ -19,10 +19,6 @@ body {
     .container {
       flex-direction: column-reverse; } }
 
-.completed {
-  background: #1d5c0347;
-  text-decoration: line-through; }
-
 .app {
   display: flex;
   flex-direction: column;
@@ -154,6 +150,13 @@ body {
       .task__time-input--minutes {
         font-size: 18px;
         margin: 0 10px 0 5px; } }
+
+.completed {
+  background: #1d5c0347;
+  text-decoration: line-through; }
+
+.completed-without-decoration {
+  background: #1d5c0347; }
 
 button {
   display: flex;
