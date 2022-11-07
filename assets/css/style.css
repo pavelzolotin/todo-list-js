@@ -32,7 +32,7 @@ body {
   @media (max-width: 767px) {
     .app {
       width: 92%;
-      padding: 25px 5px 18px 18px; } }
+      padding: 25px 0px 18px 23px; } }
   .app ol {
     width: 100%;
     color: #333;
