@@ -1,0 +1,87 @@
+$main-color: #555555;
+$background-color: #f5f5f5;
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 34px;
+  color: $main-color;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  &__add-task {
+    border-color: transparent;
+
+    &:hover {
+      background-color: #1d5c0347;
+      border-radius: 5px;
+    }
+  }
+
+  &__task-done,
+  &__task-delete {
+    position: relative;
+    width: 85px;
+    border: none;
+
+    @include phone {
+      width: 50px;
+    }
+
+    img {
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      object-fit: contain;
+    }
+  }
+
+  &__task-done {
+    margin-right: 15px;
+
+    @include phone {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: #1d5c0347;
+      color: $background-color;
+    }
+
+    img {
+      opacity: .6;
+    }
+  }
+
+  &__task-delete {
+
+    &:hover {
+      background-color: #d9071070;
+      color: $background-color;
+    }
+
+    img {
+      opacity: .7;
+    }
+  }
+
+  &__delete-all-tasks {
+    margin-left: 30px;
+    box-shadow: 0 0 10px #333;
+    border: none;
+
+    @include phone {
+      margin: 0 0 30px 0;
+    }
+
+    &:hover {
+      background-color: #db292994;
+      color: $background-color;
+    }
+  }
+}

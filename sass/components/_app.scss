@@ -1,0 +1,185 @@
+$main-color: #555555;
+$background-color: #f5f5f5;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 25px 35px;
+  background: $background-color;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #333;
+
+  @include phone {
+    width: 92%;
+    padding: 25px 5px 18px 18px;
+  }
+
+  ol {
+    width: 100%;
+    color: #333;
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-left: -5px;
+
+    @include phone {
+      margin: 0;
+    }
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.task-current {
+  &__text-input {
+    width: 100%;
+    font-family: 'Play', sans-serif;
+    font-size: 22px;
+    color: $main-color;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: transparent;
+
+    @include phone {
+      font-size: 18px;
+      padding: 10px 5px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #1d5c0347;
+    }
+  }
+
+  &__time-input {
+    &--hours,
+    &--minutes {
+      width: 20%;
+      font-family: 'Play', sans-serif;
+      font-size: 22px;
+      color: $main-color;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      border-color: transparent;
+
+      @include phone {
+        padding: 0;
+      }
+
+      &:focus-visible {
+        outline: 2px solid #1d5c0347;
+      }
+    }
+
+    &--hours {
+      margin: 0 10px 0 20px;
+
+      @include phone {
+        font-size: 18px;
+        margin: 0 5px 0 10px;
+      }
+    }
+
+    &--minutes {
+      margin: 0 20px 0 10px;
+
+      @include phone {
+        font-size: 18px;
+        margin: 0 10px 0 5px;
+      }
+    }
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0 10px 5px;
+  margin: 20px 0 10px 0;
+  font-size: 22px;
+  color: $main-color;
+  background: $background-color;
+  border-radius: 5px;
+
+  @include phone {
+    padding: 10px 0;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text-input {
+    width: 80%;
+    font-family: 'Play', sans-serif;
+    font-size: 22px;
+    color: $main-color;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: transparent;
+
+    @include phone {
+      font-size: 18px;
+      padding: 10px 5px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #1d5c0347;
+    }
+  }
+
+  &__time-input {
+    &--hours,
+    &--minutes {
+      width: 15%;
+      font-family: 'Play', sans-serif;
+      font-size: 22px;
+      color: $main-color;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      border-color: transparent;
+
+      @include phone {
+        width: 20%;
+        padding: 0;
+      }
+
+      &:focus-visible {
+        outline: 2px solid #1d5c0347;
+      }
+    }
+
+    &--hours {
+      margin: 0 10px 0 20px;
+
+      @include phone {
+        font-size: 18px;
+        margin: 0 5px 0 10px;
+      }
+    }
+
+    &--minutes {
+      margin: 0 20px 0 10px;
+
+      @include phone {
+        font-size: 18px;
+        margin: 0 10px 0 5px;
+      }
+    }
+  }
+}
