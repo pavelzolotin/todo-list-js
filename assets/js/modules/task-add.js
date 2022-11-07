@@ -55,7 +55,8 @@ function taskAdd() {
         task: task.value,
         taskTimeHours: taskTimeHours.value,
         taskTimeMinutes: taskTimeMinutes.value,
-        completed: false
+        completed: false,
+        completedWithoutDecoration: false
     }]))
 
     // create list item, add innerHTML and append to ul

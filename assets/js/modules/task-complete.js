@@ -3,6 +3,7 @@ function taskComplete(event) {
     tasks.forEach(task => {
         if (task.task === event.parentNode.children[0].value) {
             task.completed = !task.completed
+            task.completedWithoutDecoration = !task.completedWithoutDecoration
         }
     });
 
