@@ -47,7 +47,9 @@ body {
     width: 100%; }
     .app form span {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      color: #555555;
+      font-size: 22px; }
 
 .task-current__text-input {
   width: 100%;
