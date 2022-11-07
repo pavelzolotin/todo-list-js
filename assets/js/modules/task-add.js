@@ -20,14 +20,14 @@ function taskAdd() {
         return
     }
 
-    // check if hours value less or empty than necessary
-    if(taskTimeHours.value === '' || taskTimeHours.value.length < 2 || taskTimeHours.value.length > 2) {
+    //check if hours value less or empty than necessary
+    if (taskTimeHours.value === '') {
         alert('Напишите количество часов, 2 символа')
         return
     }
 
     // check if minutes value less or empty than necessary
-    if(taskTimeMinutes.value === '' || taskTimeMinutes.value.length < 2 || taskTimeMinutes.value.length > 2) {
+    if (taskTimeMinutes.value === '') {
         alert('Напишите количество минут, 2 символа')
         return
     }
@@ -114,8 +114,6 @@ function taskAdd() {
 
     // clear input
     task.value = ''
-    taskTimeHours.value = '00'
-    taskTimeMinutes.value = '00'
 
     //get tasks in localStorage
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))

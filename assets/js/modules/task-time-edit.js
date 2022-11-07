@@ -1,6 +1,6 @@
 // store current task time to track changes
-let currentTimeTaskHours = '00'
-let currentTimeTaskMinutes = '00'
+let currentTimeTaskHours = ''
+let currentTimeTaskMinutes = ''
 
 // get current task hour time
 export function taskTimeCurrentHours(event) {
@@ -12,32 +12,14 @@ export function taskTimeCurrentMinutes(event) {
     currentTimeTaskMinutes = event.value
 }
 
-function taskTimeCheck(event) {
-    // check if task time is empty
-    if (event.value === '') {
-        alert('Время не написано')
-        event.value = '00'
-        return
-    }
-
-    // check if task time is not correct
-    if (event.value.length < 2 || event.value.length > 2) {
-        alert('Напишите время, 2 символа')
-        event.value = '00'
-        return
-    }
-}
-
 // edit the task time and update local storage
 export function taskTimeHoursEdit(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
 
-    taskTimeCheck(event)
-
     // check if value more than necessary
-    if (event.value > 23) {
-        alert('Время написано некорректно')
-        event.value = '00'
+    if (event.value === '' || event.value === '0' || event.value > 23 || event.value.length >= 3) {
+        alert('Напишите количество часов, 2 символа')
+        event.value = currentTimeTaskHours
         return
     }
 
@@ -55,12 +37,10 @@ export function taskTimeHoursEdit(event) {
 export function taskTimeMinutesEdit(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
 
-    taskTimeCheck(event)
-
     // check if value more than necessary
-    if (event.value > 59) {
-        alert('Время написано некорректно')
-        event.value = '00'
+    if (event.value === '' || event.value === '0' || event.value > 59 || event.value < 10) {
+        alert('Напишите количество минут, 2 символа')
+        event.value = currentTimeTaskMinutes
         return
     }
 
