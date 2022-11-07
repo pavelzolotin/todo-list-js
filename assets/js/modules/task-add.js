@@ -114,6 +114,8 @@ function taskAdd() {
 
     // clear input
     task.value = ''
+    taskTimeHours.value = ''
+    taskTimeMinutes.value = ''
 
     //get tasks in localStorage
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
