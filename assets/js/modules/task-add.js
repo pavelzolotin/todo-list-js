@@ -115,6 +115,8 @@ function taskAdd() {
     task.value = ''
     taskTimeHours.value = '00'
     taskTimeMinutes.value = '00'
+
+    // display all-tasks-delete btn
     allTasksDelete()
 }
 
