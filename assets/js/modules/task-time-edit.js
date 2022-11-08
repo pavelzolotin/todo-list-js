@@ -16,8 +16,11 @@ export function taskTimeCurrentMinutes(event) {
 export function taskTimeHoursEdit(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
 
-    // check if value more than necessary
-    if (event.value === '' || event.value === '0' || event.value > 23 || event.value.length >= 3) {
+    // if value is less than 10, then add "0" to value
+    event.value < 10 && event.value !== '00' ? event.value = '0' + event.value : ''
+
+    //check if value more than necessary
+    if (event.value === '' || event.value === '0' || event.value >= 24 || event.value.length >= 3) {
         alert('Напишите количество часов, 2 символа')
         event.value = currentTimeTaskHours
         return
@@ -25,9 +28,7 @@ export function taskTimeHoursEdit(event) {
 
     // update task
     tasks.forEach(task => {
-        if (task.taskTimeHours === currentTimeTaskHours) {
-            task.taskTimeHours = event.value
-        }
+        task.taskTimeHours === currentTimeTaskHours ? task.taskTimeHours = event.value : null
     })
 
     // update local storage
@@ -37,8 +38,11 @@ export function taskTimeHoursEdit(event) {
 export function taskTimeMinutesEdit(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem('tasks')))
 
+    // if value is less than 10, then add "0" to value
+    event.value < 10 && event.value !== '00' ? event.value = '0' + event.value : ''
+
     // check if value more than necessary
-    if (event.value === '' || event.value === '0' || event.value > 59 || event.value < 10) {
+    if (event.value === '' || event.value === '0' || event.value > 59 || event.value.length >= 3) {
         alert('Напишите количество минут, 2 символа')
         event.value = currentTimeTaskMinutes
         return
@@ -46,9 +50,7 @@ export function taskTimeMinutesEdit(event) {
 
     // update task
     tasks.forEach(task => {
-        if (task.taskTimeMinutes === currentTimeTaskMinutes) {
-            task.taskTimeMinutes = event.value
-        }
+        task.taskTimeMinutes === currentTimeTaskMinutes ? task.taskTimeMinutes = event.value : null
     })
 
     // update local storage

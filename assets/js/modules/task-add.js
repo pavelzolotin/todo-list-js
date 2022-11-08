@@ -21,26 +21,14 @@ function taskAdd() {
     }
 
     //check if hours value less or empty than necessary
-    if (taskTimeHours.value === '') {
+    if (taskTimeHours.value === '' || taskTimeHours.value === '0' || taskTimeHours.value >= 24 || taskTimeHours.value.length >= 3 || taskTimeHours.value.length < 2) {
         alert('Напишите количество часов, 2 символа')
         return
     }
 
     // check if minutes value less or empty than necessary
-    if (taskTimeMinutes.value === '') {
+    if (taskTimeMinutes.value === '' || taskTimeMinutes.value === '0' || taskTimeMinutes.value > 59 || taskTimeMinutes.value.length >= 3 || taskTimeMinutes.value.length < 2) {
         alert('Напишите количество минут, 2 символа')
-        return
-    }
-
-    // check if hours value more than necessary
-    if (taskTimeHours.value > 23) {
-        alert('Количество часов написано некорректно')
-        return
-    }
-
-    // check if minutes value more than necessary
-    if (taskTimeMinutes.value > 59) {
-        alert('Количество минут написано некорректно')
         return
     }
 
@@ -65,7 +53,7 @@ function taskAdd() {
     const taskDiv = document.createElement('div')
     taskDiv.classList.add('task')
     taskDiv.innerHTML = `<input value="${task.value}" class="task-current__text-input">
-    <input class="task-current__time-input--hours" type="number" min="01" max="24" value="${taskTimeHours.value}">
+    <input class="task-current__time-input--hours" type="number" min="00" max="23" value="${taskTimeHours.value}">
     <span>:</span>
     <input class="task-current__time-input--minutes" type="number" min="00" max="59" value="${taskTimeMinutes.value}">
     <button class="btn__task-done"><img src="assets/img/check.png"/></button>
