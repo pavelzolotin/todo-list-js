@@ -51,52 +51,6 @@ body {
       color: #555555;
       font-size: 22px; }
 
-.task-current__text-input {
-  width: 100%;
-  height: 28px;
-  font-family: 'Play', sans-serif;
-  font-size: 22px;
-  color: #555555;
-  padding: 10px;
-  border-radius: 5px;
-  border-color: transparent;
-  resize: none; }
-  @media (max-width: 767px) {
-    .task-current__text-input {
-      font-size: 18px;
-      padding: 10px 5px; } }
-  .task-current__text-input:focus-visible {
-    outline: 2px solid #1d5c0347; }
-
-.task-current__time-input--hours, .task-current__time-input--minutes {
-  width: 20%;
-  font-family: 'Play', sans-serif;
-  font-size: 22px;
-  color: #555555;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  border-color: transparent; }
-  @media (max-width: 767px) {
-    .task-current__time-input--hours, .task-current__time-input--minutes {
-      padding: 0; } }
-  .task-current__time-input--hours:focus-visible, .task-current__time-input--minutes:focus-visible {
-    outline: 2px solid #1d5c0347; }
-
-.task-current__time-input--hours {
-  margin: 0 10px 0 20px; }
-  @media (max-width: 767px) {
-    .task-current__time-input--hours {
-      font-size: 18px;
-      margin: 0 5px 0 10px; } }
-
-.task-current__time-input--minutes {
-  margin: 0 20px 0 10px; }
-  @media (max-width: 767px) {
-    .task-current__time-input--minutes {
-      font-size: 18px;
-      margin: 0 10px 0 5px; } }
-
 .task {
   display: flex;
   justify-content: space-between;
@@ -156,6 +110,52 @@ body {
       .task__time-input--minutes {
         font-size: 18px;
         margin: 0 10px 0 5px; } }
+
+.task-current__text-input {
+  width: 100%;
+  height: 28px;
+  font-family: 'Play', sans-serif;
+  font-size: 22px;
+  color: #555555;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: transparent;
+  resize: none; }
+  @media (max-width: 767px) {
+    .task-current__text-input {
+      font-size: 18px;
+      padding: 10px 5px; } }
+  .task-current__text-input:focus-visible {
+    outline: 2px solid #1d5c0347; }
+
+.task-current__time-input--hours, .task-current__time-input--minutes {
+  width: 20%;
+  font-family: 'Play', sans-serif;
+  font-size: 22px;
+  color: #555555;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: transparent; }
+  @media (max-width: 767px) {
+    .task-current__time-input--hours, .task-current__time-input--minutes {
+      padding: 0; } }
+  .task-current__time-input--hours:focus-visible, .task-current__time-input--minutes:focus-visible {
+    outline: 2px solid #1d5c0347; }
+
+.task-current__time-input--hours {
+  margin: 0 10px 0 20px; }
+  @media (max-width: 767px) {
+    .task-current__time-input--hours {
+      font-size: 18px;
+      margin: 0 5px 0 10px; } }
+
+.task-current__time-input--minutes {
+  margin: 0 20px 0 10px; }
+  @media (max-width: 767px) {
+    .task-current__time-input--minutes {
+      font-size: 18px;
+      margin: 0 10px 0 5px; } }
 
 .completed {
   background: #1d5c0347;
