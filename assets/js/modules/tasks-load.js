@@ -27,7 +27,7 @@ function tasksLoad() {
         li.classList.add('li')
         const taskDiv = document.createElement('div')
         taskDiv.classList.add('task')
-        taskDiv.innerHTML = `<input value="${task.task}" class="task-current__text-input ${task.completed ? 'completed' : ''}">
+        taskDiv.innerHTML = `<textarea class="task-current__text-input ${task.completed ? 'completed' : ''}" maxlength="60">${task.task}</textarea>
         <input class="task-current__time-input--hours ${task.completedWithoutDecoration ? 'completed-without-decoration' : ''}" type="number" min="01" max="24" value="${task.taskTimeHours}">
         <span>:</span>
         <input class="task-current__time-input--minutes ${task.completedWithoutDecoration ? 'completed-without-decoration' : ''}" type="number" min="00" max="59" value="${task.taskTimeMinutes}">

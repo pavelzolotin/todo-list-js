@@ -53,12 +53,14 @@ body {
 
 .task-current__text-input {
   width: 100%;
+  height: 28px;
   font-family: 'Play', sans-serif;
   font-size: 22px;
   color: #555555;
   padding: 10px;
   border-radius: 5px;
-  border-color: transparent; }
+  border-color: transparent;
+  resize: none; }
   @media (max-width: 767px) {
     .task-current__text-input {
       font-size: 18px;
@@ -113,12 +115,14 @@ body {
     align-items: center; }
   .task__text-input {
     width: 80%;
+    height: 28px;
     font-family: 'Play', sans-serif;
     font-size: 22px;
     color: #555555;
     padding: 10px;
     border-radius: 5px;
-    border-color: transparent; }
+    border-color: transparent;
+    resize: none; }
     @media (max-width: 767px) {
       .task__text-input {
         font-size: 18px;
