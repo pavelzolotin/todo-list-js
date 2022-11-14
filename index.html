@@ -14,9 +14,9 @@
     <div class="app">
         <form class="app__form">
             <textarea class="task__text-input" autofocus="autofocus" maxlength="60" placeholder="Напишите задание"></textarea>
-            <input class="task__time-input--hours" type="text" pattern="[0-9]*" placeholder="00">
+            <input class="task__time-input--hours" type="number" min="00" max="23" inputmode="numeric" pattern="[0-9]*" placeholder="00">
             <span>:</span>
-            <input class="task__time-input--minutes" type="text" pattern="[0-9]*" placeholder="00">
+            <input class="task__time-input--minutes" type="number" min="00" max="59" inputmode="numeric" pattern="[0-9]*" placeholder="00">
             <button class="btn__add-task" type="submit">&plus;</button>
         </form>
         <ol></ol>

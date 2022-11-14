@@ -28,7 +28,7 @@ function tasksLoad() {
         const taskDiv = document.createElement('div')
         taskDiv.classList.add('task')
         taskDiv.innerHTML = `<textarea value="${task.task}" class="task-current__text-input ${task.completed ? 'completed' : ''}" maxlength="60">${task.task}</textarea>
-        <input class="task-current__time-input--hours ${task.completedWithoutDecoration ? 'completed-without-decoration' : ''}" type="number" min="01" max="24" value="${task.taskTimeHours}">
+        <input class="task-current__time-input--hours ${task.completedWithoutDecoration ? 'completed-without-decoration' : ''}" type="number" min="00" max="23" value="${task.taskTimeHours}">
         <span>:</span>
         <input class="task-current__time-input--minutes ${task.completedWithoutDecoration ? 'completed-without-decoration' : ''}" type="number" min="00" max="59" value="${task.taskTimeMinutes}">
         <button class="btn__task-done ${task.completed ? 'completed' : ''}"><img src="assets/img/check.png"/></button>
