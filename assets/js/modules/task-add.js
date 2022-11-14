@@ -33,7 +33,7 @@ function taskAdd() {
     }
 
     // return if task is already exists
-    if (document.querySelector(`input[value="${task.value}"]`)) {
+    if (document.querySelector(`textarea[value="${task.value}"]`)) {
         alert('Такое задание уже существует')
         return
     }
@@ -52,7 +52,7 @@ function taskAdd() {
     li.classList.add('li')
     const taskDiv = document.createElement('div')
     taskDiv.classList.add('task')
-    taskDiv.innerHTML = `<textarea class="task-current__text-input" maxlength="60">${task.value}</textarea>
+    taskDiv.innerHTML = `<textarea value="${task.value}" class="task-current__text-input" maxlength="60">${task.value}</textarea>
     <input class="task-current__time-input--hours" type="number" min="00" max="23" value="${taskTimeHours.value}">
     <span>:</span>
     <input class="task-current__time-input--minutes" type="number" min="00" max="59" value="${taskTimeMinutes.value}">
