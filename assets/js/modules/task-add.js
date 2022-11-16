@@ -27,12 +27,14 @@ function taskAdd() {
     //check if hours value less or empty than necessary
     if (taskTimeHours.value === '' || taskTimeHours.value === '0' || taskTimeHours.value >= 24 || taskTimeHours.value.length >= 3 || taskTimeHours.value.length < 2) {
         alert('Напишите количество часов, 2 символа')
+        taskTimeHours.focus()
         return
     }
 
     // check if minutes value less or empty than necessary
     if (taskTimeMinutes.value === '' || taskTimeMinutes.value === '0' || taskTimeMinutes.value > 59 || taskTimeMinutes.value.length >= 3 || taskTimeMinutes.value.length < 2) {
         alert('Напишите количество минут, 2 символа')
+        taskTimeMinutes.focus()
         return
     }
 

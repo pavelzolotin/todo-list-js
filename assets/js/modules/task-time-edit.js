@@ -23,6 +23,7 @@ export function taskTimeHoursEdit(event) {
     if (event.value === '' || event.value === '0' || event.value >= 24 || event.value.length >= 3) {
         alert('Напишите количество часов, 2 символа')
         event.value = currentTimeTaskHours
+        document.querySelector('.task-current__time-input--hours').focus()
         return
     }
 
@@ -45,6 +46,7 @@ export function taskTimeMinutesEdit(event) {
     if (event.value === '' || event.value === '0' || event.value > 59 || event.value.length >= 3) {
         alert('Напишите количество минут, 2 символа')
         event.value = currentTimeTaskMinutes
+        document.querySelector('.task-current__time-input--minutes').focus()
         return
     }
 
