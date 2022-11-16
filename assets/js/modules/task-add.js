@@ -21,8 +21,8 @@ function taskAdd() {
     }
 
     // if value is less than 10, then add "0" to value
-    taskTimeHours.value < 10 && taskTimeHours.value !== '00' ? taskTimeHours.value = '0' + taskTimeHours.value : ''
-    taskTimeMinutes.value < 10 && taskTimeMinutes.value !== '00' ? taskTimeMinutes.value = '0' + taskTimeMinutes.value : ''
+    taskTimeHours.value < 10 && taskTimeHours.value.length === 1 && taskTimeHours.value !== '00' ? taskTimeHours.value = '0' + taskTimeHours.value : ''
+    taskTimeMinutes.value < 10 && taskTimeMinutes.value.length === 1 && taskTimeMinutes.value !== '00' ? taskTimeMinutes.value = '0' + taskTimeMinutes.value : ''
 
     //check if hours value less or empty than necessary
     if (taskTimeHours.value === '' || taskTimeHours.value === '0' || taskTimeHours.value >= 24 || taskTimeHours.value.length >= 3 || taskTimeHours.value.length < 2) {
