@@ -31,8 +31,8 @@ body {
   box-shadow: 0 0 10px #333; }
   @media (max-width: 767px) {
     .app {
-      width: 92%;
-      padding: 25px 0px 18px 23px; } }
+      width: 87%;
+      padding: 20px 15px 20px 15px; } }
   .app ol {
     width: 100%;
     color: #333;
@@ -45,6 +45,10 @@ body {
   .app form {
     display: flex;
     width: 100%; }
+    @media (max-width: 767px) {
+      .app form {
+        flex-wrap: wrap;
+        justify-content: center; } }
     .app form span {
       display: flex;
       align-items: center;
@@ -79,6 +83,7 @@ body {
     resize: none; }
     @media (max-width: 767px) {
       .task__text-input {
+        flex: 1 0 50%;
         font-size: 18px;
         padding: 10px 5px; } }
     .task__text-input:focus-visible {
@@ -94,6 +99,7 @@ body {
     border-color: transparent; }
     @media (max-width: 767px) {
       .task__time-input--hours, .task__time-input--minutes {
+        flex: 1 0 10%;
         width: 20%;
         padding: 0; } }
     .task__time-input--hours:focus-visible, .task__time-input--minutes:focus-visible {
@@ -177,6 +183,10 @@ button {
 
 .btn__add-task {
   border-color: transparent; }
+  @media (max-width: 767px) {
+    .btn__add-task {
+      flex-basis: 20%;
+      margin-top: 20px; } }
   .btn__add-task:hover {
     background-color: #1d5c0347;
     border-radius: 5px; }

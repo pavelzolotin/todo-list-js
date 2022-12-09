@@ -17,6 +17,11 @@ button {
   &__add-task {
     border-color: transparent;
 
+    @include phone {
+      flex-basis: 20%;
+      margin-top: 20px;
+    }
+
     &:hover {
       background-color: #1d5c0347;
       border-radius: 5px;
