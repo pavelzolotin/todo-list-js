@@ -182,14 +182,17 @@ button {
   cursor: pointer; }
 
 .btn__add-task {
+  width: 80px;
   border-color: transparent; }
   @media (max-width: 767px) {
     .btn__add-task {
       flex-basis: 20%;
-      margin-top: 20px; } }
-  .btn__add-task:hover {
-    background-color: #1d5c0347;
-    border-radius: 5px; }
+      margin-top: 20px;
+      border: 2px solid #1d5c0347; } }
+  @media (hover: hover) {
+    .btn__add-task:hover {
+      background-color: #1d5c0347;
+      border-radius: 5px; } }
 
 .btn__task-done, .btn__task-delete {
   position: relative;
